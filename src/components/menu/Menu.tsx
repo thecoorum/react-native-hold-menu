@@ -5,6 +5,7 @@ import Animated, {
   withSpring,
   withTiming,
 } from 'react-native-reanimated';
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 import MenuList from './MenuList';
 
@@ -19,13 +20,15 @@ import {
 const MenuComponent = () => {
   const { state, menuProps } = useInternal();
 
+  const insets = useSafeAreaInsets();
+
   const wrapperStyles = useAnimatedStyle(() => {
     const anchorPositionVertical = menuProps.value.anchorPosition.split('-')[0];
 
     const top =
       anchorPositionVertical === 'top'
-        ? menuProps.value.itemHeight + menuProps.value.itemY + 8
-        : menuProps.value.itemY - 8;
+        ? menuProps.value.itemHeight + menuProps.value.itemY + insets.top
+        : menuProps.value.itemY - insets.bottom;
     const left = menuProps.value.itemX;
     const width = menuProps.value.itemWidth;
     const tY = menuProps.value.transformValue;
