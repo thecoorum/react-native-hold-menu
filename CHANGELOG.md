@@ -1,6 +1,10 @@
 # Changelog
 
-## [v0.1.2](https://github.com/thecoorum/react-native-hold-menu/compare/v0.1.2...v0.1.2)
+## [v0.1.3](https://github.com/thecoorum/react-native-hold-menu/compare/v0.1.2...v0.1.3)
+
+#### Improvements
+
+- chore: release v0.1.2 ([eb14161](https://github.com/thecoorum/react-native-hold-menu/commit/eb14161ea2413d0fc84ca3ab99049c6a8ac00e95)).
 
 ## [v0.1.2](https://github.com/thecoorum/react-native-hold-menu/compare/v0.1.1...v0.1.2) - 2021-12-01
 
