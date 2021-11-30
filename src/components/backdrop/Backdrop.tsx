@@ -36,7 +36,7 @@ type Context = {
   };
 };
 
-const BackdropComponent = () => {
+const BackdropComponent = ({ backdropIntensity = 100 }) => {
   const { state, theme } = useInternal();
 
   const tapGestureEvent = useAnimatedGestureHandler<
@@ -104,7 +104,7 @@ const BackdropComponent = () => {
     >
       <AnimatedBlurView
         // @ts-ignore
-        intensity={100}
+        intensity={backdropIntensity}
         tint="default"
         style={[styles.container, animatedContainerStyle]}
       >

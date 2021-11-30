@@ -9,4 +9,5 @@ export interface HoldMenuProviderProps {
   theme?: 'dark' | 'light';
   iconComponent?: any;
   children: React.ReactElement | React.ReactElement[];
+  backdropIntensity?: number;
 }
